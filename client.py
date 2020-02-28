@@ -79,9 +79,8 @@ class Worker_Json_Client:
             'method' : method,
             'params' : params
             }
-        print data    
+           
         req = requests.post(self.url, json.dumps(data))
-        print req.url
         response = req.json()
         if req.status_code == 200:
             return response
